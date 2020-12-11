@@ -1,10 +1,20 @@
 import Projects from './Projects';
+import { statement1, statement2 } from '../Data/personalStatement';
+import brand from '../Data/brandStatement';
 
 function AboutMe() {
     return (
         <>
-            <p>About me page</p>
-            <Projects />
+            <section>
+                <p>About: Simone Schneeberg</p>
+                <p>{brand}</p>
+                <p>{statement1}</p>
+                <br />
+                <p>{statement2}</p>
+            </section>
+            <section>
+                <Projects />
+            </section>
         </>
     );
 }
