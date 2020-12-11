@@ -14,6 +14,8 @@ function App() {
                 <Route path="/" exact component={AboutMe} />
                 <Route path="/resume" component={Resume} />
                 <Route path="/contact" component={Contact} />
+                {/* gotta find the right one and pass it in, probably have to lift up state again */}
+                <Route path="/project/:name" component={Contact} />
             </div>
         </BrowserRouter>
     );

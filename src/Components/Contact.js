@@ -1,3 +1,5 @@
+const { default: QuickLinks } = require('./QuickLinks');
+
 function Contact() {
     return (
         <div>
@@ -8,18 +10,7 @@ function Contact() {
                     get in touch, you can reach me by phone or email (listed
                     below), or drop a message directly through this site.
                 </p>
-                <a
-                    href="https://www.linkedin.com/in/simone-schneeberg/"
-                    target="_blank"
-                    rel="noreferrer">
-                    LinkedIn
-                </a>
-                <a
-                    href="https://github.com/sschneeberg"
-                    target="_blank"
-                    rel="noreferrer">
-                    Github
-                </a>
+                <QuickLinks />
             </div>
             <div className="form">
                 <form>
