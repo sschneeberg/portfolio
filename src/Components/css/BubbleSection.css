@@ -1,0 +1,56 @@
+.Bubble {
+    padding: 15px;
+    background-color: rgb(224, 237, 238);
+    border-radius: 12px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.Bubble div {
+    overflow-y: scroll;
+    height: 20vw;
+}
+
+.hide {
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .animate {
+        animation: BubbleIn 1.5s ease-in backwards;
+    }
+}
+
+@keyframes BubbleIn {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    25% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    50% {
+        opacity: 0.75;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 700px) {
+    .Bubble div {
+        height: 32vh;
+    }
+}
+
+@media (max-width: 350px) {
+    .Bubble div {
+        height: 60vh;
+    }
+}

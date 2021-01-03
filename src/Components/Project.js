@@ -1,12 +1,15 @@
-function Project(props) {
-    return (
-        <div>
-            <img src={props.img.url} alt="IMAGE GOES HERE" />
-            <h3>{props.img.title}</h3>
-            <p>{props.img.blurb}</p>
-            <div>{props.img.tags}</div>
-        </div>
-    );
+import React, { Component } from 'react';
+import './css/ProjectBubble.css';
+
+class Project extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    render() {
+        return null;
+    }
 }
 
 export default Project;
