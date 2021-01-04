@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { statement1, statement2, statement3, statement4 } from '../Data/personalStatement';
 import brand from '../Data/brandStatement';
-import projectDetails from '../Data/projectDetails';
-import BubbleSection from './BubbleSection';
+import BubbleSection from './BubbleSection1';
 import '../App.css';
 
 class AboutMe extends Component {

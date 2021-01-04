@@ -2,7 +2,7 @@ const { default: QuickLinks } = require('./QuickLinks');
 
 function Contact() {
     return (
-        <div>
+        <section>
             <h1>Let's Connect!</h1>
             <div>
                 <p>
@@ -22,7 +22,7 @@ function Contact() {
                     <input type="submit" value="SUBMIT"></input>
                 </form>
             </div>
-        </div>
+        </section>
     );
 }
 

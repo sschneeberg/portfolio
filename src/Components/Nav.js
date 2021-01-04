@@ -5,7 +5,9 @@ function Nav() {
         <nav>
             <ul>
                 <Link to="/">Home</Link>
-                <Link to="/resume">Resume</Link>
+                <Link to="/resume" target="_blank">
+                    Resume
+                </Link>
                 <Link to="/contact">Contact</Link>
             </ul>
         </nav>
