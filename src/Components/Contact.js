@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import './css/Contact.css';
 
 function Contact() {
+    const [state, setState] = useState({ name: '', email: '', msg: '' });
+
+    const sendMessage = (e) => {
+        e.preventDefault();
+        console.log('send mesasge');
+        setState({ name: '', email: '', msg: '' });
+    };
+
     return (
         <section>
             <h1>Let's Connect!</h1>
@@ -11,20 +20,43 @@ function Contact() {
                 </p>
             </div>
             <div className="form">
-                <form>
+                <form onSubmit={(e) => sendMessage(e)}>
                     <div id="info">
                         <div className="input-field col s6">
-                            <input id="fullname" type="text" required />
-                            <label htmlFor="fullname">Full Name</label>
+                            <input
+                                id="name"
+                                type="text"
+                                name="text"
+                                required
+                                value={state.name}
+                                onChange={(e) => setState({ name: e.target.value, email: state.email, msg: state.msg })}
+                            />
+                            <label htmlFor="name">Full Name</label>
                         </div>
                         <div className="input-field col s6">
-                            <input id="email" type="email" required />
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                required
+                                value={state.email}
+                                onChange={(e) => setState({ email: e.target.value, name: state.name, msg: state.msg })}
+                            />
                             <label htmlFor="email">Email</label>
                         </div>
                     </div>
                     <div id="msg">
                         <div className="input-field col s6">
-                            <textarea id="msg" className="materialize-textarea" required></textarea>
+                            <textarea
+                                id="msg"
+                                name="msg"
+                                className="materialize-textarea"
+                                required
+                                onChange={(e) =>
+                                    setState({ msg: e.target.value, email: state.email, name: state.name })
+                                }
+                                value={state.msg}
+                            />
                             <label htmlFor="msg">Message</label>
                         </div>
                         <button type="submit">Send</button>
