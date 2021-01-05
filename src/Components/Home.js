@@ -7,7 +7,7 @@ import '../App.css';
 function Home() {
     return (
         <>
-            <Nav />
+            <Nav title={'SIMONE SCHNEEBERG'} initialState={'hidden'} />
             <AboutMe />
             <Projects />
             <Contact />

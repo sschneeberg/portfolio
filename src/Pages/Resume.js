@@ -1,6 +1,7 @@
 import BubbleSection from '../Components/BubbleSection2';
 import { Projects, Jobs, Education, Skills } from '../Data/resume';
 import '../Components/css/Resume.css';
+import Nav from '../Components/Nav';
 
 function Resume() {
     const projectElements = Projects.map((project, i) => {
@@ -42,7 +43,7 @@ function Resume() {
 
     return (
         <>
-            <h2>Resume</h2>
+            <Nav title={'Resume'} initialState={'visible'} />
             <main>
                 <aside>
                     <h2>SKILLS</h2>

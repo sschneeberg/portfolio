@@ -1,13 +1,42 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import nodemailer from 'nodemailer';
 import './css/Contact.css';
 
 function Contact() {
     const [state, setState] = useState({ name: '', email: '', msg: '' });
+    const [error, setError] = useState(false);
+    const [sent, setSent] = useState(false);
 
     const sendMessage = (e) => {
         e.preventDefault();
         console.log('send mesasge');
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                setError(true);
+                setSent(false);
+            } else {
+                console.log(info);
+                setError(false);
+                setSent(true);
+            }
+        });
         setState({ name: '', email: '', msg: '' });
+    };
+
+    //nodemailer:
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.USER,
+            pass: process.env.PASS
+        }
+    });
+
+    const mailOptions = {
+        from: state.email,
+        to: process.env.USER,
+        subject: 'Portfolio Site Message',
+        text: `${state.msg} from ${state.name}`
     };
 
     return (
@@ -20,6 +49,13 @@ function Contact() {
                 </p>
             </div>
             <div className="form">
+                {error ? (
+                    <p style={{ color: 'red' }}>
+                        An error occured, please reload and try sending your message again or email me at
+                        simone.m.schneeberg@gmail.com. Thank you!
+                    </p>
+                ) : null}
+                {sent ? <p style={{ color: 'green' }}>Message Sent!</p> : null}
                 <form onSubmit={(e) => sendMessage(e)}>
                     <div id="info">
                         <div className="input-field col s6">

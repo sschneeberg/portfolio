@@ -9,7 +9,7 @@
 
 .Bubble div {
     overflow-y: scroll;
-    height: 33vh;
+    height: 23vh;
 }
 
 .Bubble p {
@@ -62,19 +62,18 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1650px) {
     .Bubble div {
-        height: 32vh;
+        height: 33vh;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 1250px) {
     .Bubble div {
-        height: 20vh;
+        height: 23vh;
     }
 }
-
-@media (max-width: 350px) {
+@media (max-width: 600px) {
     .Bubble div {
-        height: 18vh;
+        height: 17vh;
     }
 }
