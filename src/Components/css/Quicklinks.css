@@ -1,0 +1,27 @@
+div.QuickLinks {
+    display: flex;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+}
+
+a,
+Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 3px grey solid;
+    color: grey;
+    margin: 3px;
+}
+
+a:hover,
+Link:hover {
+    background-color: rgb(224, 237, 238);
+    color: rgb(121, 168, 172);
+    border-color: rgb(121, 168, 172);
+}

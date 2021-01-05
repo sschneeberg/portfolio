@@ -9,15 +9,14 @@ function Contact() {
                     Hello! Thank you for browsing my portfolio. If you'd like to get in touch, you can reach me by phone
                     or email (listed below), or drop a message directly through this site.
                 </p>
-                <QuickLinks />
             </div>
             <div className="form">
                 <form>
-                    <label for="fullname"> Name:</label>
+                    <label htmlFor="fullname"> Name:</label>
                     <input type="text" name="fullname" placeholder="First Last" required></input>
-                    <label for="email"></label>
+                    <label htmlFor="email"></label>
                     <input type="email" name="email" placeholder="example@email.com" required></input>
-                    <label for="msg"></label>
+                    <label htmlFor="msg"></label>
                     <textarea name="msg" required></textarea>
                     <input type="submit" value="SUBMIT"></input>
                 </form>

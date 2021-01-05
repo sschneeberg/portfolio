@@ -93,7 +93,7 @@ const Skills = [
     },
     {
         title: 'Applications',
-        bullets: ['Trello', 'Salesforce', 'Zapier', 'Github', 'Slack']
+        bullets: ['Trello', 'Salesforce', 'Zapier', 'Github', 'Slack', 'Mongo Atlas']
     },
     {
         title: 'Miscellaneous',

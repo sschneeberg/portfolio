@@ -1,15 +1,11 @@
 import { Link } from 'react-router-dom';
+import './css/Quicklinks.css';
+import QuickLinks from './QuickLinks';
 
 function Nav() {
     return (
         <nav>
-            <ul>
-                <Link to="/">Home</Link>
-                <Link to="/resume" target="_blank">
-                    Resume
-                </Link>
-                <Link to="/contact">Contact</Link>
-            </ul>
+            <QuickLinks />
         </nav>
     );
 }
