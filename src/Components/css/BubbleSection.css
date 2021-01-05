@@ -9,16 +9,25 @@
 
 .Bubble div {
     overflow-y: scroll;
-    height: 24vh;
+    height: 33vh;
+}
+
+.Bubble p {
+    margin: 0;
 }
 
 .hide {
-    opacity: 0;
+    position: fixed;
+    visibility: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
     .animate {
-        animation: BubbleIn 1.5s ease-in backwards;
+        animation: BubbleIn 1.5s ease-out backwards;
+    }
+
+    .deanimate {
+        animation: FadeOut 1.5s ease-in forwards;
     }
 }
 
@@ -26,10 +35,11 @@
     0% {
         opacity: 0;
         transform: scale(1);
+        position: static;
     }
     25% {
         opacity: 0.5;
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     50% {
         opacity: 0.75;
@@ -43,14 +53,28 @@
     }
 }
 
+@keyframes FadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 700px) {
     .Bubble div {
         height: 32vh;
     }
 }
+@media (max-width: 500px) {
+    .Bubble div {
+        height: 20vh;
+    }
+}
 
 @media (max-width: 350px) {
     .Bubble div {
-        height: 60vh;
+        height: 18vh;
     }
 }

@@ -1,4 +1,4 @@
-const { default: QuickLinks } = require('./QuickLinks');
+import './css/Contact.css';
 
 function Contact() {
     return (
@@ -12,13 +12,23 @@ function Contact() {
             </div>
             <div className="form">
                 <form>
-                    <label htmlFor="fullname"> Name:</label>
-                    <input type="text" name="fullname" placeholder="First Last" required></input>
-                    <label htmlFor="email"></label>
-                    <input type="email" name="email" placeholder="example@email.com" required></input>
-                    <label htmlFor="msg"></label>
-                    <textarea name="msg" required></textarea>
-                    <input type="submit" value="SUBMIT"></input>
+                    <div id="info">
+                        <div className="input-field col s6">
+                            <input id="fullname" type="text" required />
+                            <label htmlFor="fullname">Full Name</label>
+                        </div>
+                        <div className="input-field col s6">
+                            <input id="email" type="email" required />
+                            <label htmlFor="email">Email</label>
+                        </div>
+                    </div>
+                    <div id="msg">
+                        <div className="input-field col s6">
+                            <textarea id="msg" className="materialize-textarea" required></textarea>
+                            <label htmlFor="msg">Message</label>
+                        </div>
+                        <button type="submit">Send</button>
+                    </div>
                 </form>
             </div>
         </section>

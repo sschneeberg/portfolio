@@ -16,7 +16,7 @@ class BubbleSection extends Component {
             <h3>{this.props.title}</h3>
         );
         return (
-            <div className="Bubble">
+            <div className="Bubble Resume">
                 <div>
                     {title}
                     <hr />

@@ -3,11 +3,7 @@ import './css/Quicklinks.css';
 import QuickLinks from './QuickLinks';
 
 function Nav() {
-    return (
-        <nav>
-            <QuickLinks />
-        </nav>
-    );
+    return <QuickLinks />;
 }
 
 export default Nav;

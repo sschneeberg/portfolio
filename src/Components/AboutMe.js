@@ -3,6 +3,7 @@ import { statement1, statement2, statement3, statement4 } from '../Data/personal
 import brand from '../Data/brandStatement';
 import BubbleSection from './BubbleSection1';
 import '../App.css';
+import aboutMeImg from '../Data/aboutme.png';
 
 class AboutMe extends Component {
     constructor(props) {
@@ -13,19 +14,32 @@ class AboutMe extends Component {
     }
 
     toggleHide() {
-        this.state.hide === 'hide' ? this.setState({ hide: 'animate' }) : this.setState({ hide: 'hide' });
+        this.state.hide === 'hide' ? this.setState({ hide: 'animate' }) : this.deanimate();
     }
+
+    deanimate = () => {
+        this.setState({ hide: 'deanimate' });
+        setTimeout(() => {
+            this.setState({ hide: 'hide' });
+        }, 3050);
+    };
 
     render() {
         return (
             <section>
-                <img src="" alt="Simone Schneeberg Software Engineer" />
-                <h2>Simone Schneeberg</h2>
-                <h4>Software Developer</h4>
-                <p>{brand}</p>
-                <button type="button" onClick={() => this.toggleHide()}>
-                    Personal Statement
-                </button>
+                <img src={aboutMeImg} alt="Simone Schneeberg Software Engineer" />
+                <div className="AboutMe">
+                    <h2>SIMONE SCHNEEBERG</h2>
+                    <div>
+                        <h4 style={{ color: 'rgb(107, 107, 107)' }}>
+                            <em>Software Engineer</em>
+                        </h4>
+                        <p>{brand}</p>
+                    </div>
+                    <button type="button" onClick={() => this.toggleHide()}>
+                        Personal Statement
+                    </button>
+                </div>
                 <div className="statementGrid">
                     <BubbleSection data={statement1} hide={this.state.hide} delay="0" />
                     <BubbleSection data={statement2} hide={this.state.hide} delay="0.5s" />
