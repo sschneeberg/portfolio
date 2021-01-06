@@ -1,12 +1,17 @@
 import fruitrisBubble from './fruitrisMenu.png';
+import fruitrisGrow from './fruitrisGrow.png';
+import fruitrisTwoPlayer from './fruitrisTwoPlayer.png';
 import trackerAppBubble from './trackerLanding.png';
+import trackerAppHome from './trackerHome.png';
+import trackerAppEdit from './trackerEdit.png';
+import trackerAppAdvice from './trackerAdvice.png';
 
 const Fruitris = {
     title: 'Fruitris',
     img: fruitrisBubble,
     description: 'this will be text',
     tags: ['Javascript', 'HTML5', 'CSS3', 'HTML Canvas'],
-    altImgs: [],
+    altImgs: [fruitrisBubble, fruitrisGrow, fruitrisTwoPlayer],
     link: 'https://sschneeberg.github.io/fruitris',
     github: 'https://github.com/sschneeberg/fruitris'
 };
@@ -15,7 +20,7 @@ const TrackerApp = {
     img: trackerAppBubble,
     description: 'this will be text',
     tags: ['Node.js', 'Express', 'SQL', 'Sequelize', 'PostgreSQL', 'Passport', 'Javascipt', 'HTML5', 'CSS3'],
-    altImgs: [],
+    altImgs: [trackerAppHome, trackerAppEdit, trackerAppAdvice],
     link: 'https://trackerapp.herokuapp.com',
     github: 'https://github.com/sschneeberg/tracker-app'
 };

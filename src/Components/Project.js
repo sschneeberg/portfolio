@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 import ProjectBubble from './ProjectBubble';
 import projectDetails from '../Data/projectDetails';
 import './css/BubbleSection.css';
@@ -7,7 +8,13 @@ import './css/Project.css';
 class Project extends Component {
     constructor(props) {
         super(props);
-        this.state = { selected: '', all: '', class: '', grid: '', display: 'display' };
+        this.state = {
+            selected: '',
+            all: '',
+            class: '',
+            grid: '',
+            display: 'display'
+        };
     }
 
     componentDidMount() {
@@ -75,25 +82,36 @@ class Project extends Component {
 
         if (this.state.selected) {
             projectHighlight = (
-                <div className="projectHighlight">
-                    <div className={this.state.display}>
-                        <div className="imgGrid">
-                            {this.state.selected.altImgs.map((img, i) => {
-                                return <img key={i} src={img} alt={this.state.selected.title} />;
-                            })}
-                        </div>
-                        <p>{this.state.selected.description}</p>
-                        <div className="tags">
-                            {this.state.selected.tags.map((tag, i) => {
-                                return (
-                                    <p key={i} className="tag">
-                                        {tag.toUpperCase()}
-                                    </p>
-                                );
-                            })}
+                <>
+                    <div className="projectHighlight">
+                        <div className={this.state.display}>
+                            <SimpleReactLightbox>
+                                <SRLWrapper>
+                                    <div className="imgGrid">
+                                        {this.state.selected.altImgs.map((img, i) => {
+                                            return (
+                                                <a key={i} href={img}>
+                                                    <img src={img} alt={this.state.selected.title} />
+                                                </a>
+                                            );
+                                        })}
+                                    </div>
+                                </SRLWrapper>
+                            </SimpleReactLightbox>
+
+                            <p>{this.state.selected.description}</p>
+                            <div className="tags">
+                                {this.state.selected.tags.map((tag, i) => {
+                                    return (
+                                        <p key={i} className="tag">
+                                            {tag.toUpperCase()}
+                                        </p>
+                                    );
+                                })}
+                            </div>
                         </div>
                     </div>
-                </div>
+                </>
             );
         }
 
