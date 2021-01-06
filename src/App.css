@@ -5,6 +5,7 @@
     background-color: aliceblue;
     color: rgb(65, 65, 65);
     min-height: 100vh;
+    min-width: 100vw;
     font-family: 'Yantramanav', sans-serif;
     font-size: 18px;
 }
@@ -18,6 +19,7 @@ h3 {
 
 section {
     padding: 30px;
+    margin: 10px;
 }
 
 .statementGrid {
@@ -61,26 +63,13 @@ div.AboutMe button:hover {
     cursor: pointer;
 }
 
-img {
+img.aboutMe {
     height: 40vh;
+    width: 275px;
+    object-fit: cover;
     float: left;
     border-radius: 12px;
     margin: 5px 5px 15px 20px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 @media (min-width: 1650px) {

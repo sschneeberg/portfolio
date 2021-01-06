@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import nodemailer from 'nodemailer';
 import './css/Contact.css';
 

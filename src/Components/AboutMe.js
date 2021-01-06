@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { statement1, statement2, statement3, statement4 } from '../Data/personalStatement';
 import brand from '../Data/brandStatement';
-import BubbleSection from './BubbleSection1';
+import BubbleSection from './TextBubble';
 import '../App.css';
 import aboutMeImg from '../Data/aboutme.png';
 
@@ -27,7 +27,7 @@ class AboutMe extends Component {
     render() {
         return (
             <section>
-                <img src={aboutMeImg} alt="Simone Schneeberg Software Engineer" />
+                <img className="aboutMe" src={aboutMeImg} alt="Simone Schneeberg Software Engineer" />
                 <div className="AboutMe">
                     <h2>SIMONE SCHNEEBERG</h2>
                     <div>

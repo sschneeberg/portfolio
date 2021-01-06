@@ -1,6 +1,6 @@
 import Nav from './Nav';
 import AboutMe from './AboutMe';
-import Projects from '../Pages/Projects';
+import Projects from './Project';
 import Contact from './Contact';
 import '../App.css';
 

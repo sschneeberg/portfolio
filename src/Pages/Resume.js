@@ -1,4 +1,4 @@
-import BubbleSection from '../Components/BubbleSection2';
+import BubbleSection from '../Components/ResumeBubble';
 import { Projects, Jobs, Education, Skills } from '../Data/resume';
 import '../Components/css/Resume.css';
 import Nav from '../Components/Nav';

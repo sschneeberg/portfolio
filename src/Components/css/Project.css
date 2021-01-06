@@ -1,0 +1,109 @@
+.ProjectDisplay {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 33vh;
+    gap: 1rem;
+}
+
+.show {
+    grid-auto-rows: 20vh;
+    grid-template-columns: repeat(5, 18vw);
+    margin: 0 auto;
+}
+
+.show img {
+    object-fit: scale-down;
+    height: 15vh;
+}
+
+.thumbnail {
+    grid-area: span 1 / span 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ProjectDisplay div.Bubble {
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.ProjectDisplay img {
+    margin: auto;
+    object-fit: cover;
+    height: 31vh;
+    width: 28vw;
+}
+
+.ProjectDisplay .thumbnail img {
+    margin-left: 0;
+    margin-right: 10px;
+    object-fit: contain;
+    height: 15vh;
+    width: 15vh;
+}
+
+imgGrid {
+    display: flex;
+    width: 100%;
+}
+
+imgGrid img {
+    min-width: 50%;
+    object-fit: scale-down;
+}
+
+.tags {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.tag {
+    background-color: #888888;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 3px;
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .display {
+        animation: Grow 1s linear forwards;
+    }
+    .undisplay {
+        animation: unGrow 1s ease-out forwards;
+    }
+}
+
+@keyframes Grow {
+    from {
+        height: 15vh;
+        width: 25vw;
+    }
+    to {
+        height: 65vh;
+        width: 100vh;
+    }
+}
+@keyframes unGrow {
+    to {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    from {
+        height: 65vh;
+        width: 100vh;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1000px) {
+}
