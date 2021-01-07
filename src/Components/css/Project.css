@@ -5,15 +5,19 @@
     gap: 1rem;
 }
 
+div.Bubble.Project {
+    padding: 0;
+}
+
 .show {
-    grid-auto-rows: 20vh;
+    grid-auto-rows: 12vh;
     grid-template-columns: repeat(5, 18vw);
     margin: 0 auto;
 }
 
 .show img {
     object-fit: scale-down;
-    height: 15vh;
+    height: 10vh;
 }
 
 .thumbnail {
@@ -25,29 +29,31 @@
 
 .ProjectDisplay div.Bubble {
     margin: 0;
-    padding: 5px;
     overflow: hidden;
+    background-color: #f3f3f3;
 }
 
 .ProjectDisplay img {
-    margin: auto;
     object-fit: cover;
-    height: 31vh;
-    width: 28vw;
+    height: 100%;
+    width: 100%;
 }
 
 .ProjectDisplay .thumbnail img {
-    margin-left: 0;
+    margin-left: 10%;
     margin-right: 10px;
-    object-fit: contain;
-    height: 15vh;
+    height: 10vh;
     width: 15vh;
+}
+.ProjectDisplay .thumbnail h4 {
+    margin-left: 4%;
 }
 
 .imgGrid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    height: 40vh;
+    grid-auto-rows: 40vh;
     overflow: hidden;
 }
 
@@ -73,8 +79,7 @@
 }
 
 .tag {
-    background-color: #888888;
-    color: white;
+    background-color: aliceblue;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 3px;
@@ -85,6 +90,32 @@
 
 .display {
     margin-top: 50px;
+}
+
+.projectInfo {
+    display: flex;
+    padding: 18px;
+    text-align: justify;
+}
+
+.projectInfo .projectText {
+    margin: 0;
+    margin-right: 30px;
+}
+
+.projectLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 30px;
+}
+
+div.tags {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -98,12 +129,16 @@
 
 @keyframes Grow {
     from {
-        height: 15vh;
+        height: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         width: 25vw;
     }
     to {
-        height: 65vh;
-        width: 100vw;
+        height: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        width: 100%;
     }
 }
 @keyframes unGrow {
@@ -119,7 +154,31 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+    .imgGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .imgGrid a img,
+    .imgGrid a {
+        width: 44vw;
+    }
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
+    .ProjectSection {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .ProjectSection {
+        padding: 5px;
+    }
+    .imgGrid {
+        grid-template-columns: 1fr;
+    }
+    .imgGrid a img,
+    .imgGrid a {
+        width: 80vw;
+        margin: 0 auto;
+    }
 }

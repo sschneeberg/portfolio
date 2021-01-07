@@ -5,12 +5,14 @@ class BubbleSection extends Component {
         return (
             <>
                 {this.props.class ? (
-                    <div className={`Bubble ${this.props.class}`} onClick={() => this.props.onClick(this.props.title)}>
+                    <div
+                        className={`Bubble ${this.props.class} Project`}
+                        onClick={() => this.props.onClick(this.props.title)}>
                         <img src={this.props.img} alt={this.props.title} />
-                        <h3>{this.props.title}</h3>
+                        <h4>{this.props.title.toUpperCase()}</h4>
                     </div>
                 ) : (
-                    <div className="Bubble" onClick={() => this.props.onClick(this.props.title)}>
+                    <div className="Bubble Project" onClick={() => this.props.onClick(this.props.title)}>
                         <img src={this.props.img} alt={this.props.title} />
                     </div>
                 )}

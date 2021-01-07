@@ -45,12 +45,12 @@ function Contact() {
             <h1>Let's Connect!</h1>
             <div className="contactMsg">
                 <p>
-                    Hello! Thank you for browsing my portfolio. If you'd like to get in touch, you can reach me by phone
-                    or email (listed below), or drop a message directly through this site.
+                    Hello! Thank you for browsing my portfolio. If you'd like to get in touch, you can reach me by the
+                    phone or email listed below, or drop a message directly through this site.
                 </p>
                 <div className="contactLinks">
                     <a className="contactLink">
-                        <i class="fas fa-phone-alt"></i>
+                        <i className="fas fa-phone-alt"></i>
                         <p>917.828.5437</p>
                     </a>
                     <Link className="contactLink" to="/resume" target="_blank" rel="noreferrer">
@@ -58,7 +58,7 @@ function Contact() {
                         <p>Resume</p>
                     </Link>
                     <a className="contactLink" href="mailto:simone.m.schneeberg@gmail.com">
-                        <i class="fas fa-envelope"></i>
+                        <i className="fas fa-envelope"></i>
                         <p>simone.m.schneeberg@gmail.com</p>
                     </a>
                 </div>

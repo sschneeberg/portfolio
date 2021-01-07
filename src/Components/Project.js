@@ -23,6 +23,7 @@ class Project extends Component {
             allProjects[project.title] = {
                 img: project.img,
                 description: project.description,
+                userstories: project.userstories,
                 tags: project.tags,
                 altImgs: project.altImgs,
                 link: project.link,
@@ -83,32 +84,44 @@ class Project extends Component {
         if (this.state.selected) {
             projectHighlight = (
                 <>
-                    <div className="projectHighlight">
-                        <div className={this.state.display}>
-                            <SimpleReactLightbox>
-                                <SRLWrapper>
-                                    <div className="imgGrid">
-                                        {this.state.selected.altImgs.map((img, i) => {
-                                            return (
-                                                <a key={i} href={img}>
-                                                    <img src={img} alt={this.state.selected.title} />
-                                                </a>
-                                            );
-                                        })}
-                                    </div>
-                                </SRLWrapper>
-                            </SimpleReactLightbox>
+                    <div className={`projectHighlight ${this.state.display}`}>
+                        <SimpleReactLightbox>
+                            <SRLWrapper>
+                                <div className="imgGrid">
+                                    {this.state.selected.altImgs.map((img, i) => {
+                                        return (
+                                            <a key={i} href={img}>
+                                                <img src={img} alt={this.state.selected.title} />
+                                            </a>
+                                        );
+                                    })}
+                                </div>
+                            </SRLWrapper>
+                        </SimpleReactLightbox>
 
-                            <p>{this.state.selected.description}</p>
-                            <div className="tags">
-                                {this.state.selected.tags.map((tag, i) => {
-                                    return (
-                                        <p key={i} className="tag">
-                                            {tag.toUpperCase()}
-                                        </p>
-                                    );
-                                })}
+                        <div className="projectInfo">
+                            <div className="projectLinks">
+                                <a href={this.state.selected.github} target="_blank" rel="noreferrer">
+                                    <i className="fab fa-github fa-lg"></i>
+                                </a>
+                                <a href={this.state.selected.link} target="_blank" rel="noreferrer">
+                                    <i className="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
+                            <div className="projectText">
+                                <p className="projectDescription">{this.state.selected.description}</p>
+                                <p className="userStories">{this.state.selected.userstories}</p>
+                            </div>
+                        </div>
+
+                        <div className="tags">
+                            {this.state.selected.tags.map((tag, i) => {
+                                return (
+                                    <p key={i} className="tag">
+                                        {tag.toUpperCase()}
+                                    </p>
+                                );
+                            })}
                         </div>
                     </div>
                 </>
@@ -116,7 +129,8 @@ class Project extends Component {
         }
 
         return (
-            <section>
+            <section className="ProjectSection" style={{ backgroundColor: 'rgb(224, 237, 238)' }}>
+                <h2>PROJECTS</h2>
                 <div className={`ProjectDisplay ${this.state.grid}`}>{projects}</div>
                 {this.state.selected ? projectHighlight : null}
             </section>

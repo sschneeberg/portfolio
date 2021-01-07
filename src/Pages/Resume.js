@@ -2,6 +2,7 @@ import BubbleSection from '../Components/ResumeBubble';
 import { Projects, Jobs, Education, Skills } from '../Data/resume';
 import '../Components/css/Resume.css';
 import Nav from '../Components/Nav';
+import pdf from '../Data/SimoneSchneebergResume.pdf';
 
 function Resume() {
     const projectElements = Projects.map((project, i) => {
@@ -47,8 +48,10 @@ function Resume() {
             <main>
                 <div className="skills">
                     <h2>SKILLS</h2>
-
                     <div className="skillsGrid">{skillElements}</div>
+                    <a className="download" href={pdf} target="_blank" rel="noreferrer">
+                        DOWNLOAD RESUME
+                    </a>
                 </div>
                 <div>
                     <h2>RECENT PROJECTS</h2>
