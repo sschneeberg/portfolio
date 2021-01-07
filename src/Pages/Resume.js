@@ -45,10 +45,11 @@ function Resume() {
         <>
             <Nav title={'Resume'} initialState={'visible'} />
             <main>
-                <aside>
+                <div className="skills">
                     <h2>SKILLS</h2>
-                    {skillElements}
-                </aside>
+
+                    <div className="skillsGrid">{skillElements}</div>
+                </div>
                 <div>
                     <h2>RECENT PROJECTS</h2>
                     {projectElements}

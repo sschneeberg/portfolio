@@ -45,3 +45,28 @@ form button:hover {
         width: 100%;
     }
 }
+
+.contactLinks {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+a.contactLink {
+    justify-content: flex-start;
+}
+
+a.contactLink p {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.contactMsg {
+    margin-left: 50px;
+}
+
+@media (max-width: 900px) {
+    .contactLinks {
+        flex-direction: column;
+    }
+}

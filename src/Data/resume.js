@@ -1,9 +1,13 @@
 const Projects = [
     {
         title: 'Pest Damage Report',
-        description: 'MERN Stack application',
+        description: 'MERN Stack Application',
         date: 'December 2020',
-        bullets: ['Managed a team of four', 'Primarily on the back end']
+        bullets: [
+            'Lead team of four to create full stack application in ten days, Maintained group repository and development schedule',
+            'Spearheaded back end api and database development in Express with MongoDB, Implemented Socket.io functionality',
+            ' Instated user authentication with tiered permissions to allow multifunctional use of the app with varied api access'
+        ]
     },
     {
         title: 'Tracker App',
@@ -71,8 +75,8 @@ const Education = [
         bullets: []
     },
     {
-        title: 'Carnegie Mellon University, Carnegie Institute of Technology',
-        description: 'BS in Mechanical Engineering, Pittsburgh,PA',
+        title: 'Carnegie Mellon University',
+        description: 'BS Mechanical Engineering, Pittsburgh, PA',
         date: 'May 2019',
         bullets: ['University Honors']
     }
@@ -81,23 +85,27 @@ const Education = [
 const Skills = [
     {
         title: 'Languages',
-        bullets: ['Javascript/Node.js', 'Python', 'SQL', 'Matlab', 'Arduino', 'CSS3', 'HTML5']
+        bullets: ['Javascript/Node.js', 'CSS3 + HTML5', 'Python', 'Matlab', 'Arduino', 'SQL']
     },
     {
         title: 'Databases',
-        bullets: ['Mongo DB, PostgrSQL']
+        bullets: ['Mongo DB', 'PostgreSQL']
     },
     {
         title: 'Libraries + Frameworks',
-        bullets: ['React.js', 'Express.js', 'Bootstrap', 'Django']
+        bullets: ['React.js', 'Express.js', 'Bootstrap', 'Django', 'Sequelize', 'Mongoose', 'Socket.io']
     },
     {
-        title: 'Applications',
-        bullets: ['Trello', 'Salesforce', 'Zapier', 'Github', 'Slack', 'Mongo Atlas']
+        title: 'Tools',
+        bullets: ['Github', 'Slack', 'Mongo Atlas', 'Trello', 'Heroku', 'Salesforce', 'Zapier']
+    },
+    {
+        title: 'Methodologies',
+        bullets: ['Responsive Design', 'REST', 'MVC', 'OOP']
     },
     {
         title: 'Miscellaneous',
-        bullets: ['Carpentry', 'Metalwork', 'MIG/TIG Welding', 'Rapid Prototyping', 'CAD']
+        bullets: ['Carpentry', 'Metalwork', 'MIG/TIG Welding', 'Rapid Prototyping', 'Vectorworks/CAD']
     }
 ];
 

@@ -3,25 +3,37 @@ import './css/BubbleSection.css';
 
 class BubbleSection extends Component {
     render() {
+        const content2 = this.props.bullets.map((list, i) => {
+            return (
+                <li key={i}>
+                    <i className="fas fa-angle-right fa-sm"></i> {list}
+                </li>
+            );
+        });
+
         const content = this.props.bullets.map((list, i) => {
             return <li key={i}>{list}</li>;
         });
 
-        const title = this.props.date ? (
-            <h3>
-                {this.props.title} <span>{this.props.description}</span>
-                <span>{this.props.date}</span>
-            </h3>
+        const bubble = this.props.date ? (
+            <>
+                <h4>
+                    {this.props.title} <span>{this.props.description}</span>
+                    <span style={{ float: 'right' }}>{this.props.date}</span>
+                </h4>
+                <hr />
+                <ul>{content}</ul>
+            </>
         ) : (
-            <h3>{this.props.title}</h3>
+            <>
+                <h4>{this.props.title}</h4>
+                <hr />
+                <ul>{content2}</ul>
+            </>
         );
         return (
             <div className="Bubble Resume">
-                <div>
-                    {title}
-                    <hr />
-                    <ul>{content}</ul>
-                </div>
+                <div>{bubble}</div>
             </div>
         );
     }

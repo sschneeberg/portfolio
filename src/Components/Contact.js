@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import nodemailer from 'nodemailer';
 import './css/Contact.css';
 
@@ -42,11 +43,25 @@ function Contact() {
     return (
         <section>
             <h1>Let's Connect!</h1>
-            <div>
+            <div className="contactMsg">
                 <p>
                     Hello! Thank you for browsing my portfolio. If you'd like to get in touch, you can reach me by phone
                     or email (listed below), or drop a message directly through this site.
                 </p>
+                <div className="contactLinks">
+                    <a className="contactLink">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>917.828.5437</p>
+                    </a>
+                    <Link className="contactLink" to="/resume" target="_blank" rel="noreferrer">
+                        <i className="far fa-file-alt fa-lg"></i>
+                        <p>Resume</p>
+                    </Link>
+                    <a className="contactLink" href="mailto:simone.m.schneeberg@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <p>simone.m.schneeberg@gmail.com</p>
+                    </a>
+                </div>
             </div>
             <div className="form">
                 {error ? (

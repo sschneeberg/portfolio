@@ -5,14 +5,17 @@
     background-color: aliceblue;
     color: rgb(65, 65, 65);
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     font-family: 'Yantramanav', sans-serif;
     font-size: 18px;
+    position: absolute;
+    top: 0;
+    padding-top: 40px;
 }
 
 h1,
 h2,
-h3 {
+h4 {
     font-family: 'Abel', sans-serif;
     font-weight: 300;
 }

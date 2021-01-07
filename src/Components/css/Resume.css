@@ -1,19 +1,18 @@
 main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
     text-align: left;
-    margin: 50px 100px 50px 120px;
-}
-
-aside {
-    width: 20vw;
-}
-
-main div {
-    width: 70vw;
+    gap: 40px;
+    margin: 0 auto;
+    padding-top: 90px;
+    width: 80vw;
 }
 
 .Bubble.Resume {
-    width: 85%;
+    width: 100%;
+    justify-content: start;
+    padding: 20px;
+    margin-left: 0;
 }
 
 .Bubble.Resume div {
@@ -21,4 +20,47 @@ main div {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     text-align: left;
+    width: 100%;
+}
+
+.Bubble.Resume h4 {
+    letter-spacing: -2px;
+    width: 100%;
+}
+
+.Bubble.Resume h4 span {
+    letter-spacing: -2px;
+    font-size: 30px;
+    color: #888888;
+}
+
+.Bubble.Resume ul li {
+    padding-left: 20px;
+}
+
+div.skills .Bubble.Resume {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1450px) {
+    .Bubble.Resume h4 {
+        height: 2em;
+    }
+}
+@media (max-width: 1025px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    div.skillsGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 0px;
+    }
 }
