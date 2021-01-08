@@ -1,43 +1,29 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import nodemailer from 'nodemailer';
 import './css/Contact.css';
 
 function Contact() {
     const [state, setState] = useState({ name: '', email: '', msg: '' });
-    const [error, setError] = useState(false);
-    const [sent, setSent] = useState(false);
+    const [status, setStatus] = useState('');
 
-    const sendMessage = (e) => {
-        e.preventDefault();
-        console.log('send mesasge');
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                setError(true);
-                setSent(false);
+    const submitForm = (ev) => {
+        ev.preventDefault();
+        const form = ev.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                form.reset();
+                setStatus({ status: 'success' });
+                setState({ name: '', email: '', msg: '' });
             } else {
-                console.log(info);
-                setError(false);
-                setSent(true);
+                setStatus({ status: 'error' });
             }
-        });
-        setState({ name: '', email: '', msg: '' });
-    };
-
-    //nodemailer:
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.USER,
-            pass: process.env.PASS
-        }
-    });
-
-    const mailOptions = {
-        from: state.email,
-        to: process.env.USER,
-        subject: 'Portfolio Site Message',
-        text: `${state.msg} from ${state.name}`
+        };
+        xhr.send(data);
     };
 
     return (
@@ -64,20 +50,25 @@ function Contact() {
                 </div>
             </div>
             <div className="form">
-                {error ? (
+                {status === 'success' ? <p style={{ color: 'green' }}>Message Sent!</p> : null}
+                {status === 'error' ? (
                     <p style={{ color: 'red' }}>
-                        An error occured, please reload and try sending your message again or email me at
-                        simone.m.schneeberg@gmail.com. Thank you!
+                        An Error Occured, please try sending your message again or email me at
+                        simone.m.schneeberg@gmail.com
                     </p>
                 ) : null}
-                {sent ? <p style={{ color: 'green' }}>Message Sent!</p> : null}
-                <form onSubmit={(e) => sendMessage(e)}>
+                <form
+                    action="https://formspree.io/f/xleoablg"
+                    method="POST"
+                    onSubmit={(e) => {
+                        submitForm(e);
+                    }}>
                     <div id="info">
                         <div className="input-field col s6">
                             <input
                                 id="name"
                                 type="text"
-                                name="text"
+                                name="name"
                                 required
                                 value={state.name}
                                 onChange={(e) => setState({ name: e.target.value, email: state.email, msg: state.msg })}
@@ -87,7 +78,7 @@ function Contact() {
                         <div className="input-field col s6">
                             <input
                                 id="email"
-                                name="email"
+                                name="_replyto"
                                 type="email"
                                 required
                                 value={state.email}
