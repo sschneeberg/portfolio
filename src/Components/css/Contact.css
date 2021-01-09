@@ -4,7 +4,8 @@ div.form {
 
 form {
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 form div#info,
@@ -36,20 +37,11 @@ form button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    form {
-        flex-direction: column;
-    }
-    form div#info,
-    form div#msg {
-        width: 100%;
-    }
-}
-
 .contactLinks {
     display: flex;
     width: 50%;
     justify-content: space-between;
+    margin-left: 12%;
 }
 
 a.contactLink {
@@ -68,11 +60,19 @@ a.contactLink p {
 .miniAbout {
     width: 97%;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 @media (max-width: 900px) {
     .contactLinks {
         flex-direction: column;
+    }
+    form {
+        flex-direction: column;
+        width: 100%;
+    }
+    form div#info,
+    form div#msg {
+        width: 100%;
     }
 }
