@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './css/Quicklinks.css';
 
-function QuickLinks() {
+function QuickLinks(props) {
     return (
         <div className="QuickLinks">
             <a href="https://www.linkedin.com/in/simone-schneeberg/" target="_blank" rel="noreferrer">
@@ -10,9 +10,15 @@ function QuickLinks() {
             <a href="https://github.com/sschneeberg" target="_blank" rel="noreferrer">
                 <i className="fab fa-github fa-lg"></i>
             </a>
-            <Link to="/resume" target="_blank" rel="noreferrer">
-                <i className="far fa-file-alt fa-lg"></i>
-            </Link>
+            {props.title === 'RESUME' ? (
+                <Link to="/" rel="noreferrer">
+                    <i className="fas fa-home fa-lg"></i>
+                </Link>
+            ) : (
+                <Link to="/resume" target="_blank" rel="noreferrer">
+                    <i className="far fa-file-alt fa-lg"></i>
+                </Link>
+            )}
         </div>
     );
 }

@@ -44,7 +44,7 @@ function Resume() {
 
     return (
         <>
-            <Nav title={'Resume'} initialState={'visible'} />
+            <Nav title={'RESUME'} initialState={'visible'} />
             <main>
                 <div className="skills">
                     <h2>SKILLS</h2>

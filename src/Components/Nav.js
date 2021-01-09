@@ -23,7 +23,7 @@ function Nav(props) {
             <h4 className="Nav" style={{ visibility: hide }}>
                 {props.title}
             </h4>
-            <QuickLinks />
+            <QuickLinks title={props.title} />
         </div>
     );
 }
