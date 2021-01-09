@@ -34,6 +34,10 @@ function Contact() {
                     Hello! Thank you for browsing my portfolio. If you'd like to get in touch, you can reach me by the
                     phone or email listed below, or drop a message directly through this site.
                 </p>
+                <p className="miniAbout">
+                    I'm currently located in Washington DC, where I dabble in theater carpentry, welding and scenic
+                    design. If you want to talk theater, art, or programming, let's connect!
+                </p>
                 <div className="contactLinks">
                     <a className="contactLink">
                         <i className="fas fa-phone-alt"></i>

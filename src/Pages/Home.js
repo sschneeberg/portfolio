@@ -1,7 +1,7 @@
-import Nav from './Nav';
-import AboutMe from './AboutMe';
-import Projects from './Project';
-import Contact from './Contact';
+import Nav from '../Components/Nav';
+import AboutMe from '../Components/AboutMe';
+import Projects from '../Components/Project';
+import Contact from '../Components/Contact';
 import '../App.css';
 
 function Home() {

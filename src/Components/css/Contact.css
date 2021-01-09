@@ -65,6 +65,12 @@ a.contactLink p {
     margin-left: 50px;
 }
 
+.miniAbout {
+    width: 97%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 900px) {
     .contactLinks {
         flex-direction: column;

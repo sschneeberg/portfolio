@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { statement1, statement2, statement3, statement4 } from '../Data/personalStatement';
 import brand from '../Data/brandStatement';
 import BubbleSection from './TextBubble';
-import '../App.css';
 import aboutMeImg from '../Data/aboutme.png';
+import testimonials from '../Data/testimonials';
+import '../App.css';
 
 class AboutMe extends Component {
     constructor(props) {
@@ -25,6 +26,17 @@ class AboutMe extends Component {
     };
 
     render() {
+        const refs = testimonials.map((ref, i) => {
+            return (
+                <div className="testimonial" key={i}>
+                    <p>{ref.msg}</p>
+                    <p className="testimonialName">
+                        - {ref.name} <span>{ref.title}</span>
+                    </p>
+                </div>
+            );
+        });
+
         return (
             <section>
                 <img className="aboutMe" src={aboutMeImg} alt="Simone Schneeberg Software Engineer" />
@@ -46,6 +58,7 @@ class AboutMe extends Component {
                     <BubbleSection data={statement3} hide={this.state.hide} delay="1s" />
                     <BubbleSection data={statement4} hide={this.state.hide} delay="1.5s" />
                 </div>
+                <div className="testimonials">{refs}</div>
             </section>
         );
     }
