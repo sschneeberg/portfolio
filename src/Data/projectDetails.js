@@ -18,7 +18,7 @@ const Fruitris = {
         'Inspired by a childhood favorite, Fruitris is a tetris-like game based on the Neopets Game: GadGads Game.  Fruitris players can choose to play either as single player or multiplayer.  In single player, players can choose difficulties which will indicate the score to beat.  In two player mode, players switch off arranging peices on the same board, competeing to gain as many points as possible while ensuring they are not the one to fill the board.  Full game instructions can be found in the menu as well as in an in-game Help pop up.  Fruitris was built using vanilla Javascript DOM manipulation and HTML Canvas. The board is mapped to a 2D Array for easy collision, clearing, and win detection. Game physics rely on the asynchronous nature of Javascript.',
     userstories: '',
     tags: ['Javascript', 'HTML5', 'CSS3', 'HTML Canvas'],
-    altImgs: [fruitrisBubble, fruitrisGrow, fruitrisTwoPlayer],
+    altImgs: [fruitrisBubble, fruitrisTwoPlayer, fruitrisGrow],
     link: 'https://sschneeberg.github.io/fruitris',
     github: 'https://github.com/sschneeberg/fruitris'
 };
@@ -30,7 +30,7 @@ const TrackerApp = {
     userstories:
         'As a user, I want to reliably track my period and related information, recording what I deem important.  I want to be able to see my predicted, upcoming start date as well as information regarding my typical cycle.  As a user, I want the ability to compare symptoms across periods and quickly access information from past dates.',
     tags: ['Node.js', 'Express', 'SQL', 'Sequelize', 'PostgreSQL', 'Passport', 'Javascipt', 'HTML5', 'CSS3'],
-    altImgs: [trackerAppHome, trackerAppEdit, trackerAppAdvice],
+    altImgs: [trackerAppBubble, trackerAppHome, trackerAppEdit, trackerAppAdvice],
     link: 'https://periodtrackerapp.herokuapp.com',
     github: 'https://github.com/sschneeberg/tracker-app'
 };
@@ -47,6 +47,6 @@ const PDR = {
     github: 'https://github.com/sschneeberg/pdr-frontend'
 };
 
-const projectDetails = [PDR, TrackerApp, Fruitris];
+const projectDetails = [PDR, Fruitris, TrackerApp];
 
 export default projectDetails;

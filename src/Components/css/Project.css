@@ -50,21 +50,17 @@ div.Bubble.Project {
 }
 
 .imgGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     width: 100%;
-    grid-auto-rows: 40vh;
-    overflow: hidden;
+    justify-content: space-evenly;
+    margin: 0 auto;
 }
 
-.imgGrid a img,
-.imgGrid a {
-    width: 30vw;
+.imgGrid img {
     margin: 5px;
-    height: 40vh;
-    object-fit: scale-down;
+    width: 85%;
     border: none;
-    border-radius: 0%;
+    border-radius: 6px;
 }
 
 .imgGrid a:hover,
@@ -118,6 +114,18 @@ div.tags {
     width: 100%;
 }
 
+i.slide {
+    color: #d1d1d1;
+    opacity: 0.6;
+    transform: translate(0, 15vw);
+    height: 100px;
+}
+
+i.slide:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .display {
         animation: Grow 1s linear forwards;
@@ -163,22 +171,22 @@ div.tags {
         width: 44vw;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
     .ProjectSection {
-        padding: 15px;
+        padding: 40px 10px 40px 10px;
+    }
+    .imgGrid img {
+        width: 80%;
     }
 }
-
-@media (max-width: 750px) {
-    .ProjectSection {
-        padding: 5px;
-    }
-    .imgGrid {
+@media (max-width: 700px) {
+    .ProjectDisplay {
         grid-template-columns: 1fr;
     }
-    .imgGrid a img,
-    .imgGrid a {
-        width: 80vw;
-        margin: 0 auto;
+    .show {
+        grid-template-columns: 1fr;
+    }
+    .thumbnail {
+        grid-area: span 1 / span 1;
     }
 }

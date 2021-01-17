@@ -3,6 +3,11 @@
     width: 100%;
 }
 
+.Nav .QuickLinks a,
+.Nav .QuickLinks Link {
+    box-shadow: rgb(215, 241, 240) 1px 1px;
+}
+
 h4.Nav {
     position: fixed;
     top: 0;

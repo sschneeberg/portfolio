@@ -13,7 +13,8 @@ class Project extends Component {
             all: '',
             class: '',
             grid: '',
-            display: 'display'
+            display: 'display',
+            next: 0
         };
     }
 
@@ -34,6 +35,11 @@ class Project extends Component {
         this.setState({ all: allProjects });
     }
 
+    next = () => {
+        const next = (this.state.next + 1) % this.state.selected.altImgs.length;
+        this.setState({ next });
+    };
+
     toggleSelected = (title) => {
         //if initial state, then change to show
         //if show, change selected
@@ -46,7 +52,7 @@ class Project extends Component {
                     this.setState({ selected: '', display: 'display' });
                 }, 1050);
             } else {
-                this.setState({ selected: this.state.all[title] });
+                this.setState({ selected: this.state.all[title], next: 0 });
             }
         } else {
             this.setState({ class: 'thumbnail', selected: this.state.all[title], grid: 'show' });
@@ -85,19 +91,11 @@ class Project extends Component {
             projectHighlight = (
                 <>
                     <div className={`projectHighlight ${this.state.display}`}>
-                        <SimpleReactLightbox>
-                            <SRLWrapper>
-                                <div className="imgGrid">
-                                    {this.state.selected.altImgs.map((img, i) => {
-                                        return (
-                                            <a key={i} href={img}>
-                                                <img src={img} alt={this.state.selected.title} />
-                                            </a>
-                                        );
-                                    })}
-                                </div>
-                            </SRLWrapper>
-                        </SimpleReactLightbox>
+                        <div className="imgGrid">
+                            <i onClick={() => this.next()} className="slide fas fa-chevron-left fa-5x"></i>
+                            <img src={this.state.selected.altImgs[this.state.next]} alt={this.state.selected.title} />
+                            <i onClick={() => this.next()} className="slide fas fa-chevron-right fa-5x"></i>
+                        </div>
 
                         <div className="projectInfo">
                             <div className="projectLinks">
