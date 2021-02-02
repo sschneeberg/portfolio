@@ -39,18 +39,21 @@ class AboutMe extends Component {
 
         return (
             <section>
-                <img className="aboutMe" src={aboutMeImg} alt="Simone Schneeberg Software Engineer" />
-                <div className="AboutMe">
-                    <h2>SIMONE SCHNEEBERG</h2>
-                    <div>
-                        <h4 style={{ color: 'rgb(107, 107, 107)' }}>
-                            <em>Software Engineer</em>
-                        </h4>
-                        <p>{brand}</p>
+                <div className="aboutme-header">
+                    <img className="aboutMe" src={aboutMeImg} alt="Simone Schneeberg Software Engineer" />
+
+                    <div className="AboutMe">
+                        <h2>SIMONE SCHNEEBERG</h2>
+                        <div>
+                            <h4 style={{ color: 'rgb(107, 107, 107)' }}>
+                                <em>Software Engineer</em>
+                            </h4>
+                            <p className="brand">{brand}</p>
+                        </div>
+                        <button type="button" onClick={() => this.toggleHide()}>
+                            Personal Statement
+                        </button>
                     </div>
-                    <button type="button" onClick={() => this.toggleHide()}>
-                        Personal Statement
-                    </button>
                 </div>
                 <div className="statementGrid">
                     <BubbleSection data={statement1} hide={this.state.hide} delay="0" />

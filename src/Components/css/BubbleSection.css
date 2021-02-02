@@ -1,6 +1,6 @@
 .Bubble {
     padding: 15px;
-    background-color: rgb(224, 237, 238);
+    background-color: rgba(182, 221, 211, 0.534);
     border-radius: 12px;
     margin: 15px;
     display: flex;
@@ -9,7 +9,9 @@
 
 .Bubble div {
     overflow-y: scroll;
-    height: 23vh;
+    height: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
 }
 
 .Bubble p {
@@ -59,21 +61,5 @@
     }
     100% {
         opacity: 0;
-    }
-}
-
-@media (max-width: 1650px) {
-    .Bubble div {
-        height: 33vh;
-    }
-}
-@media (max-width: 1250px) {
-    .Bubble div {
-        height: 23vh;
-    }
-}
-@media (max-width: 600px) {
-    .Bubble div {
-        height: 17vh;
     }
 }

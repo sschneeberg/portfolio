@@ -4,6 +4,7 @@ div.QuickLinks {
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 11;
 }
 
 a,
@@ -23,6 +24,6 @@ Link {
 a:hover,
 Link:hover {
     background-color: rgb(224, 237, 238);
-    color: rgb(121, 168, 172);
-    border-color: rgb(121, 168, 172);
+    color: rgba(147, 178, 182);
+    border-color: rgba(147, 178, 182);
 }

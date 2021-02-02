@@ -30,6 +30,10 @@ p.testimonialName span {
 
 section {
     padding: 40px;
+    width: 100%;
+}
+div.aboutme-header {
+    display: flex;
 }
 
 div.testimonials {
@@ -48,17 +52,16 @@ div.testimonial {
 .statementGrid {
     display: grid;
     gap: 3px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 40vh;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     position: relative;
+    margin: 40px 0;
 }
 
 div.AboutMe {
-    padding-top: 10vh;
+    margin-top: 5vw;
 }
 
-div.AboutMe div {
+div.AboutMe div div {
     padding-left: 20vw;
     padding-right: 30px;
 }
@@ -74,43 +77,53 @@ div.AboutMe button {
     font-size: 16px;
     letter-spacing: 1px;
     color: rgb(107, 107, 107);
+    background-color: aliceblue;
 }
 
 div.AboutMe button:focus {
     outline: none;
+    background-color: aliceblue;
+    color: rgb(107, 107, 107);
+    border: 2px grey solid;
 }
 div.AboutMe button:hover {
-    background-color: rgb(224, 237, 238);
-    color: rgb(121, 168, 172);
-    border-color: rgb(121, 168, 172);
+    background-color: rgba(198, 231, 235, 0.6);
+    color: rgba(147, 178, 182);
+    border-color: rgba(147, 178, 182, 0.8);
     cursor: pointer;
 }
 
 img.aboutMe {
-    height: 40vh;
+    max-height: 350px;
     width: 275px;
     object-fit: cover;
-    float: left;
     border-radius: 12px;
     margin: 5px 5px 15px 20px;
 }
 
-@media (min-width: 1650px) {
-    .statementGrid {
-        grid-auto-rows: 30vh;
-    }
+p.brand {
+    text-align: justify;
 }
+
 @media (max-width: 1250px) {
     .statementGrid {
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 30vh;
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
+    img.aboutMe {
+        display: none;
+    }
+    div.AboutMe button {
+        width: 92%;
+        float: none;
+    }
+}
+
+@media (max-width: 800px) {
     .statementGrid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 27vh;
     }
 
     div.testimonials {
@@ -124,6 +137,12 @@ img.aboutMe {
     }
 }
 
+@media (max-width: 500px) {
+    div.AboutMe h2 {
+        font-size: 2.5em;
+        margin: 0 auto;
+    }
+}
 @media (max-width: 350px) {
     div.AboutMe div {
         width: 100%;

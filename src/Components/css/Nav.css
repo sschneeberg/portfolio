@@ -1,15 +1,11 @@
 .Nav {
-    background-color: rgba(182, 217, 221, 0.452);
-    width: 100%;
-}
-
-.Nav .QuickLinks a,
-.Nav .QuickLinks Link {
-    box-shadow: rgb(215, 241, 240) 1px 1px;
+    background-color: rgba(182, 217, 221, 0.8);
+    width: 100vw;
+    z-index: 10;
+    position: fixed;
 }
 
 h4.Nav {
-    position: fixed;
     top: 0;
     left: 0;
     padding: 20px;
