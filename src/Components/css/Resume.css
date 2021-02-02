@@ -65,8 +65,45 @@ div.skills a {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 815px) {
     div.skillsGrid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .Bubble.Resume h4,
+    .Bubble.Resume h4 span {
+        letter-spacing: 1px;
+        font-size: 1.75rem;
+    }
+    .Bubble.Resume h4 {
+        height: 3.6em;
+    }
+}
+
+@media (max-width: 500px) {
+    div.skillsGrid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .Bubble.Resume h4,
+    .Bubble.Resume h4 span {
+        font-size: 1.5rem;
+    }
+
+    .Bubble.Resume h4 {
+        height: 4em;
+    }
+}
+
+@media (max-width: 450px) {
+    .Bubble.Resume h4,
+    .Bubble.Resume h4 span {
+        font-size: 1rem;
+    }
+    .Bubble.Resume h4 {
+        height: 3.5em;
     }
 }
