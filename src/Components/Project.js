@@ -127,7 +127,7 @@ class Project extends Component {
         }
 
         return (
-            <section className="ProjectSection" style={{ backgroundColor: 'rgb(224, 237, 238)' }}>
+            <section className="ProjectSection" style={{ backgroundColor: 'rgba(182, 221, 211, 0.534)' }}>
                 <h2>PROJECTS</h2>
                 <div className={`ProjectDisplay ${this.state.grid}`}>{projects}</div>
                 {this.state.selected ? projectHighlight : null}

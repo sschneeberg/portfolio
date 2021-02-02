@@ -1,16 +1,26 @@
 const Projects = [
     {
-        title: 'Pest Damage Report',
+        title: 'Tier | Breaker ',
+        description: 'Flask/React Application',
+        date: 'January 2020',
+        bullets: [
+            'Designed database models and created a fully tested Flask API with Socket.io integration as Backend Engineer',
+            'Supported frontend team through thoughtful api design, Created React components and CSS stylesheets as needed',
+            'Taught myself Flask, MongoEngine, and Python Socketio to create a full stack application in less than one week'
+        ]
+    },
+    {
+        title: 'Pest Damage Report ',
         description: 'MERN Stack Application',
         date: 'December 2020',
         bullets: [
             'Lead team of four to create full stack application in ten days, Maintained group repository and development schedule',
             'Spearheaded back end api and database development in Express with MongoDB, Implemented Socket.io functionality',
-            ' Instated user authentication with tiered permissions to allow multifunctional use of the app with varied api access'
+            'Instated user authentication with tiered permissions to allow multifunctional use of the app with varied api access'
         ]
     },
     {
-        title: 'Tracker App',
+        title: 'Tracker App ',
         description: 'Express Web Application',
         date: 'December 2020',
         bullets: [
@@ -20,7 +30,7 @@ const Projects = [
         ]
     },
     {
-        title: 'Fruitris',
+        title: 'Fruitris ',
         description: 'Client Side Javascript Game',
         date: 'November 2020',
         bullets: [
@@ -93,7 +103,7 @@ const Skills = [
     },
     {
         title: 'Libraries + Frameworks',
-        bullets: ['React.js', 'Express.js', 'Bootstrap', 'Django', 'Sequelize', 'Mongoose', 'Socket.io']
+        bullets: ['React JS', 'Express JS', 'Bootstrap', 'Django', 'Sequelize', 'Mongoose', 'Socket.io', 'Mocha JS']
     },
     {
         title: 'Tools',

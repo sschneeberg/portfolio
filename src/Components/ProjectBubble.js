@@ -6,9 +6,9 @@ class BubbleSection extends Component {
             <>
                 {this.props.class ? (
                     <div
+                        style={{ textAlign: 'center' }}
                         className={`Bubble ${this.props.class} Project`}
                         onClick={() => this.props.onClick(this.props.title)}>
-                        <img src={this.props.img} alt={this.props.title} />
                         <h4>{this.props.title.toUpperCase()}</h4>
                     </div>
                 ) : (

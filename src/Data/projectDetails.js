@@ -10,6 +10,10 @@ import pdrAdmin from './pdrAdmin.png';
 import pdrChat from './pdrChat.png';
 import pdrDev from './pdrDev.png';
 import pdrUser from './pdrUser.png';
+import tbcreate from './tbcreate.png';
+import tbbracket from './tbbracket.png';
+import tblanding from './tblanding.png';
+import tbpublic from './tbpublic.png';
 
 const Fruitris = {
     title: 'Fruitris',
@@ -46,7 +50,18 @@ const PDR = {
     link: 'https://pestdamagereport.herokuapp.com/',
     github: 'https://github.com/sschneeberg/pdr-frontend'
 };
+const TB = {
+    title: 'Tier | Breaker',
+    img: tbcreate,
+    description:
+        "Pest Damage Report (PDR) is a bug tracking website designed for software companies to utilize in place of creating their own tracking or support system.  A company can sign up an administrative user, then through the use of a UUID key, they can invite additional staff members to have admin or support accounts on PDR.  We offer a link to embed into their sites for easy customer access.  Customers can submit bug reports without logging in, or create an account to see their report's status and connect with comapny support.  Pest Damage Report is a MERN stack application, utilizing Mongoose to connect with MongoDB.  Notifications and chat features are implemented through the use of Socket.io.",
+    userstories: '',
+    tags: ['React', 'Node.js', 'Flask', 'MongoDB', 'Socket.io', 'Javascript', 'Python', 'HTML5', 'CSS3'],
+    altImgs: [tbcreate, tblanding, tbpublic, tbbracket],
+    link: 'https://tier-breaker.herokuapp.com/',
+    github: 'https://github.com/sschneeberg/tierbreaker_backend'
+};
 
-const projectDetails = [PDR, Fruitris, TrackerApp];
+const projectDetails = [TB, PDR, TrackerApp, Fruitris];
 
 export default projectDetails;

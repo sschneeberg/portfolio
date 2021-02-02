@@ -1,6 +1,6 @@
 .ProjectDisplay {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 33vh;
     gap: 1rem;
 }
@@ -21,7 +21,7 @@ div.Bubble.Project {
 }
 
 .thumbnail {
-    grid-area: span 1 / span 3;
+    grid-area: span 1 / span 2;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -75,7 +75,7 @@ div.Bubble.Project {
 }
 
 .tag {
-    background-color: aliceblue;
+    background-color: white;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 3px;
