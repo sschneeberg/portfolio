@@ -38,7 +38,7 @@ const TrackerApp = {
     altImgs: [trackerAppBubble, trackerAppHome, trackerAppEdit, trackerAppAdvice],
     link: 'https://periodtrackerapp.herokuapp.com',
     github: 'https://github.com/sschneeberg/tracker-app',
-    credentials: ['sschneeberg', 'pass4word']
+    credentials: ['user', 'password']
 };
 const PDR = {
     title: 'Pest Damage Report',

@@ -7,6 +7,10 @@
 
 div.Bubble.Project {
     padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #888888;
 }
 
 .show {
@@ -20,17 +24,19 @@ div.Bubble.Project {
     height: 10vh;
 }
 
-.thumbnail {
-    grid-area: span 1 / span 2;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 .ProjectDisplay div.Bubble {
     margin: 0;
     overflow: hidden;
     background-color: #f3f3f3;
+}
+
+.thumbnail.Bubble.Project {
+    grid-area: span 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(65, 65, 65);
+    text-align: center;
 }
 
 .ProjectDisplay img {
@@ -204,22 +210,30 @@ div.alt-links a:hover {
     .ProjectSection {
         padding: 40px 10px 40px 10px;
     }
+    .ProjectDisplay.show {
+        grid-template-columns: 1fr;
+    }
     .ProjectDisplay {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .imgGrid img {
-        width: 80%;
+    .thumbnail.Bubble.Project {
+        grid-area: span 1 / span 1;
     }
 }
 @media (max-width: 700px) {
+    .ProjectDisplay.show {
+        grid-template-columns: 1fr;
+    }
     .ProjectDisplay {
         grid-template-columns: 1fr;
     }
-    .show {
-        grid-template-columns: 1fr;
-    }
-    .thumbnail {
+    .thumbnail.Bubble.Project {
         grid-area: span 1 / span 1;
+    }
+}
+
+@media (max-width: 490px) {
+    i.slide {
+        display: none;
     }
 }

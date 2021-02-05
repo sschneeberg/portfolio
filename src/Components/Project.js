@@ -68,8 +68,11 @@ class Project extends Component {
                         key={i}
                         onClick={this.toggleSelected}
                         class={this.state.class}
+                        selected={true}
                     />
                 );
+            } else if (this.state.grid) {
+                return <ProjectBubble title={project.title} key={i} onClick={this.toggleSelected} />;
             } else {
                 return <ProjectBubble title={project.title} key={i} img={project.img} onClick={this.toggleSelected} />;
             }
