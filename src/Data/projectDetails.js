@@ -25,7 +25,7 @@ const Fruitris = {
     altImgs: [fruitrisBubble, fruitrisTwoPlayer, fruitrisGrow],
     link: 'https://sschneeberg.github.io/fruitris',
     github: 'https://github.com/sschneeberg/fruitris',
-    credentails: ''
+    credentials: ''
 };
 const TrackerApp = {
     title: 'Tracker',
@@ -38,7 +38,7 @@ const TrackerApp = {
     altImgs: [trackerAppBubble, trackerAppHome, trackerAppEdit, trackerAppAdvice],
     link: 'https://periodtrackerapp.herokuapp.com',
     github: 'https://github.com/sschneeberg/tracker-app',
-    credentails: ['sschneeberg', 'pass4word']
+    credentials: ['sschneeberg', 'pass4word']
 };
 const PDR = {
     title: 'Pest Damage Report',
@@ -51,7 +51,7 @@ const PDR = {
     altImgs: [pdrLanding, pdrUser, pdrAdmin, pdrDev, pdrChat],
     link: 'https://pestdamagereport.herokuapp.com/',
     github: 'https://github.com/sschneeberg/pdr-frontend',
-    credentails: ['Customer', 'password']
+    credentials: ['customer@email.com', 'password']
 };
 const TB = {
     title: 'Tier | Breaker',

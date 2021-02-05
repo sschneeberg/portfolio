@@ -28,7 +28,8 @@ class Project extends Component {
                 altImgs: project.altImgs,
                 link: project.link,
                 github: project.github,
-                title: project.title
+                title: project.title,
+                credentials: project.credentials
             };
         });
         this.setState({ all: allProjects });
@@ -65,22 +66,12 @@ class Project extends Component {
                     <ProjectBubble
                         title={project.title}
                         key={i}
-                        img={project.img}
-                        tags={project.tags}
                         onClick={this.toggleSelected}
                         class={this.state.class}
                     />
                 );
             } else {
-                return (
-                    <ProjectBubble
-                        title={project.title}
-                        key={i}
-                        img={project.img}
-                        tags={project.tags}
-                        onClick={this.toggleSelected}
-                    />
-                );
+                return <ProjectBubble title={project.title} key={i} img={project.img} onClick={this.toggleSelected} />;
             }
         });
 
@@ -117,7 +108,17 @@ class Project extends Component {
                                         View this project on Github
                                     </a>
                                     <a href={this.state.selected.link} target="_blank" rel="noreferrer">
-                                        Visit the live site
+                                        {'Visit the live site '}
+                                        {this.state.selected.credentials ? (
+                                            <span>
+                                                : use test credentials{' '}
+                                                <em>
+                                                    {this.state.selected.credentials[0]} {'('}
+                                                    password: {this.state.selected.credentials[1]}
+                                                    {')'}
+                                                </em>
+                                            </span>
+                                        ) : null}
                                     </a>
                                 </div>
                             </div>
