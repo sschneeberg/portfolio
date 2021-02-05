@@ -23,6 +23,12 @@
     visibility: hidden;
 }
 
+p.header {
+    color: #888888;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .animate {
         animation: BubbleIn 1.5s ease-out backwards;

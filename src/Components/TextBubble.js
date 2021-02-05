@@ -6,6 +6,7 @@ class BubbleSection extends Component {
         return (
             <div className={`Bubble ${this.props.hide}`} style={{ animationDelay: this.props.delay }}>
                 <div>
+                    <p className="header">{this.props.header}</p>
                     <p>{this.props.data}</p>
                 </div>
             </div>

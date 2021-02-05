@@ -58,13 +58,17 @@ div.Bubble.Project {
 
 .imgGrid img {
     margin: 5px;
-    width: 85%;
+    width: 80%;
     border: none;
     border-radius: 6px;
 }
 
+.Bubble.Project:hover {
+    border: rgba(240, 248, 255, 0.63) 1px solid;
+}
+
 .imgGrid a:hover,
-.ProjectDisplay div.Bubble:hover {
+.ProjectDisplay div.Bubble.Project:hover {
     cursor: pointer;
 }
 
@@ -108,6 +112,7 @@ div.Bubble.Project {
 
 div.tags {
     margin: 0 auto;
+    margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -115,7 +120,7 @@ div.tags {
 }
 
 i.slide {
-    color: #d1d1d1;
+    color: #a6c6cc;
     opacity: 0.6;
     transform: translate(0, 15vw);
     height: 100px;
@@ -124,6 +129,30 @@ i.slide {
 i.slide:hover {
     opacity: 0.9;
     cursor: pointer;
+    color: aliceblue;
+}
+
+div.alt-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    min-width: fit-content;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    margin: 0 auto;
+}
+
+div.alt-links a {
+    border: none;
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+div.alt-links a:hover {
+    background: none;
+    color: rgb(166, 201, 206);
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -24,7 +24,8 @@ const Fruitris = {
     tags: ['Javascript', 'HTML5', 'CSS3', 'HTML Canvas'],
     altImgs: [fruitrisBubble, fruitrisTwoPlayer, fruitrisGrow],
     link: 'https://sschneeberg.github.io/fruitris',
-    github: 'https://github.com/sschneeberg/fruitris'
+    github: 'https://github.com/sschneeberg/fruitris',
+    credentails: ''
 };
 const TrackerApp = {
     title: 'Tracker',
@@ -36,7 +37,8 @@ const TrackerApp = {
     tags: ['Node.js', 'Express', 'SQL', 'Sequelize', 'PostgreSQL', 'Passport', 'Javascipt', 'HTML5', 'CSS3'],
     altImgs: [trackerAppBubble, trackerAppHome, trackerAppEdit, trackerAppAdvice],
     link: 'https://periodtrackerapp.herokuapp.com',
-    github: 'https://github.com/sschneeberg/tracker-app'
+    github: 'https://github.com/sschneeberg/tracker-app',
+    credentails: ['sschneeberg', 'pass4word']
 };
 const PDR = {
     title: 'Pest Damage Report',
@@ -48,18 +50,20 @@ const PDR = {
     tags: ['React', 'Express', 'Node.js', 'Passport Jwt', 'Socket.io', 'Javascript', 'HTML5', 'CSS3'],
     altImgs: [pdrLanding, pdrUser, pdrAdmin, pdrDev, pdrChat],
     link: 'https://pestdamagereport.herokuapp.com/',
-    github: 'https://github.com/sschneeberg/pdr-frontend'
+    github: 'https://github.com/sschneeberg/pdr-frontend',
+    credentails: ['Customer', 'password']
 };
 const TB = {
     title: 'Tier | Breaker',
     img: tbcreate,
     description:
-        'Tier Breaker provides hassle free tournament creation to answer burning questions between friends or pose them to the public. Users simply create a tournament for a designated time period and enter their first round options, while we do the rest. Polls can be created as private or public; private polls have a key that users can enter to vote in the tournament. All polls have an edit key available to the creator after generation. Tier Breaker consists of a Flask API using MongoEngine, connected to a React client. Socket.io is used to provide live voting updates to all connected clients.',
+        'Tier Breaker provides hassle free tournament creation to answer burning questions between friends or pose them to the public. Users simply create a tournament for a designated time period and enter their first round options and we do the rest! Polls can be created as private or public; private polls have a key that users can enter to vote in the tournament. All polls have an edit key available to the creator after generation. Tier Breaker consists of a Flask API using MongoEngine, connected to a React client. Socket.io is used to provide live voting updates to all connected clients.',
     userstories: '',
     tags: ['React', 'Node.js', 'Flask', 'Mocha', 'MongoDB', 'Socket.io', 'Javascript', 'Python', 'HTML5', 'CSS3'],
     altImgs: [tbcreate, tblanding, tbpublic, tbbracket],
     link: 'https://tier-breaker.herokuapp.com/',
-    github: 'https://github.com/sschneeberg/tierbreaker_backend'
+    github: 'https://github.com/sschneeberg/tierbreaker_backend',
+    credentials: ''
 };
 
 const projectDetails = [TB, PDR, TrackerApp, Fruitris];

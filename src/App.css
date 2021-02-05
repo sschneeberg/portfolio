@@ -17,7 +17,8 @@ h1,
 h2,
 h3,
 h4,
-p.testimonialName {
+p.testimonialName,
+p.header {
     font-family: 'Abel', sans-serif;
     font-weight: 300;
 }

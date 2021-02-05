@@ -51,16 +51,19 @@ class AboutMe extends Component {
                             <p className="brand">{brand}</p>
                         </div>
                         <button type="button" onClick={() => this.toggleHide()}>
-                            Personal Statement
+                            More About Me
                         </button>
                     </div>
                 </div>
                 <div className="statementGrid">
-                    <BubbleSection data={statement1} hide={this.state.hide} delay="0" />
-                    <BubbleSection data={statement2} hide={this.state.hide} delay="0.5s" />
-                    <BubbleSection data={statement3} hide={this.state.hide} delay="1s" />
-                    <BubbleSection data={statement4} hide={this.state.hide} delay="1.5s" />
+                    <BubbleSection data={statement1} hide={this.state.hide} delay="0" header="Background" />
+                    <BubbleSection data={statement2} hide={this.state.hide} delay="0.5s" header="Background" />
+                    <BubbleSection data={statement3} hide={this.state.hide} delay="1s" header="Philosophy" />
+                    <BubbleSection data={statement4} hide={this.state.hide} delay="1.5s" header="Philosophy" />
                 </div>
+                <p style={{ fontSize: 'xx-large' }} className="header">
+                    Testimonials
+                </p>
                 <div className="testimonials">{refs}</div>
             </section>
         );

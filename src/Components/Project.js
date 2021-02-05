@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 import ProjectBubble from './ProjectBubble';
 import projectDetails from '../Data/projectDetails';
 import './css/BubbleSection.css';
@@ -91,10 +90,14 @@ class Project extends Component {
             projectHighlight = (
                 <>
                     <div className={`projectHighlight ${this.state.display}`}>
-                        <div className="imgGrid">
-                            <i onClick={() => this.next()} className="slide fas fa-chevron-left fa-5x"></i>
-                            <img src={this.state.selected.altImgs[this.state.next]} alt={this.state.selected.title} />
-                            <i onClick={() => this.next()} className="slide fas fa-chevron-right fa-5x"></i>
+                        <div className="tags">
+                            {this.state.selected.tags.map((tag, i) => {
+                                return (
+                                    <p key={i} className="tag">
+                                        {tag.toUpperCase()}
+                                    </p>
+                                );
+                            })}
                         </div>
 
                         <div className="projectInfo">
@@ -109,17 +112,30 @@ class Project extends Component {
                             <div className="projectText">
                                 <p className="projectDescription">{this.state.selected.description}</p>
                                 <p className="userStories">{this.state.selected.userstories}</p>
+                                <div className="alt-links">
+                                    <a href={this.state.selected.github} target="_blank" rel="noreferrer">
+                                        View this project on Github
+                                    </a>
+                                    <a href={this.state.selected.link} target="_blank" rel="noreferrer">
+                                        Visit the live site
+                                    </a>
+                                </div>
                             </div>
                         </div>
-
-                        <div className="tags">
-                            {this.state.selected.tags.map((tag, i) => {
-                                return (
-                                    <p key={i} className="tag">
-                                        {tag.toUpperCase()}
-                                    </p>
-                                );
-                            })}
+                        <p style={{ textAlign: 'center', color: '#b5b5b5' }}>
+                            Please use the arrows to navigate project images. Click a different project name to view it,
+                            or click the same project title to close this section.
+                        </p>
+                        <div className="imgGrid">
+                            <i
+                                title="Previous Image"
+                                onClick={() => this.next()}
+                                className="slide fas fa-chevron-left fa-5x"></i>
+                            <img src={this.state.selected.altImgs[this.state.next]} alt={this.state.selected.title} />
+                            <i
+                                title="Next Image"
+                                onClick={() => this.next()}
+                                className="slide fas fa-chevron-right fa-5x"></i>
                         </div>
                     </div>
                 </>
