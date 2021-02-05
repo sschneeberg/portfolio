@@ -27,3 +27,9 @@ Link:hover {
     color: rgba(147, 178, 182);
     border-color: rgba(147, 178, 182);
 }
+
+@media (max-width: 499px) {
+    div.QuickLinks {
+        left: 0;
+    }
+}

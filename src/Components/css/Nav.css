@@ -15,3 +15,9 @@ h4.Nav {
     font-weight: 300;
     text-shadow: rgb(215, 241, 240) 1px 1px;
 }
+
+@media (max-width: 500px) {
+    h4.Nav {
+        display: none;
+    }
+}

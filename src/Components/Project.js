@@ -111,24 +111,21 @@ class Project extends Component {
                                         View this project on Github
                                     </a>
                                     <a href={this.state.selected.link} target="_blank" rel="noreferrer">
-                                        {'Visit the live site '}
+                                        {'Visit the live site, '}
                                         {this.state.selected.credentials ? (
-                                            <span>
-                                                : use test credentials{' '}
-                                                <em>
-                                                    {this.state.selected.credentials[0]} {'('}
-                                                    password: {this.state.selected.credentials[1]}
-                                                    {')'}
-                                                </em>
-                                            </span>
+                                            <>
+                                                use test credentials: {this.state.selected.credentials[0]} {'('}
+                                                password: {this.state.selected.credentials[1]}
+                                                {')'}
+                                            </>
                                         ) : null}
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <p style={{ textAlign: 'center', color: '#b5b5b5' }}>
-                            Please use the arrows to navigate project images. Click a different project name to view it,
-                            or click the same project title to close this section.
+                        <p className="project-instructions">
+                            <span>Please use the arrows to navigate project images. </span>Click a different project
+                            name to view it, or click the same project title to close this section.
                         </p>
                         <div className="imgGrid">
                             <i

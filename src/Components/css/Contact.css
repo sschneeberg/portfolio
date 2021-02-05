@@ -76,3 +76,13 @@ a.contactLink p {
         width: 100%;
     }
 }
+
+@media (max-width: 500px) {
+    .contactLinks,
+    .contactMsg {
+        margin-left: 0;
+    }
+    a.contactLink p {
+        font-size: small;
+    }
+}
