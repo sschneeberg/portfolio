@@ -45,7 +45,7 @@ const PDR = {
         "Pest Damage Report (PDR) is a bug tracking website designed for software companies to utilize in place of creating their own tracking or support system.  A company can sign up an administrative user, then through the use of a UUID key, they can invite additional staff members to have admin or support accounts on PDR.  We offer a link to embed into their sites for easy customer access.  Customers can submit bug reports without logging in, or create an account to see their report's status and connect with comapny support.  Pest Damage Report is a MERN stack application, utilizing Mongoose to connect with MongoDB.  Notifications and chat features are implemented through the use of Socket.io.",
     userstories:
         'As a customer I want to log on and submit bug reports to the companies whose product that I use. I want to be able to see the tickets I have submitted, their current status, and any related comments.  As a software company I want to sign up users under my company name to manage and address customer submitted bug reports. I want to have admin users who can manage ticket assignment and support accounts who will address bugs, interact with the customer and close out tickets',
-    tags: ['React', 'Express', 'Node.js', 'Socket.io', 'Javascript', 'HTML5', 'CSS3'],
+    tags: ['React', 'Express', 'Node.js', 'Passport Jwt', 'Socket.io', 'Javascript', 'HTML5', 'CSS3'],
     altImgs: [pdrLanding, pdrUser, pdrAdmin, pdrDev, pdrChat],
     link: 'https://pestdamagereport.herokuapp.com/',
     github: 'https://github.com/sschneeberg/pdr-frontend'
@@ -54,9 +54,9 @@ const TB = {
     title: 'Tier | Breaker',
     img: tbcreate,
     description:
-        "Pest Damage Report (PDR) is a bug tracking website designed for software companies to utilize in place of creating their own tracking or support system.  A company can sign up an administrative user, then through the use of a UUID key, they can invite additional staff members to have admin or support accounts on PDR.  We offer a link to embed into their sites for easy customer access.  Customers can submit bug reports without logging in, or create an account to see their report's status and connect with comapny support.  Pest Damage Report is a MERN stack application, utilizing Mongoose to connect with MongoDB.  Notifications and chat features are implemented through the use of Socket.io.",
+        'Tier Breaker provides hassle free tournament creation to answer burning questions between friends or pose them to the public. Users simply create a tournament for a designated time period and enter their first round options, while we do the rest. Polls can be created as private or public; private polls have a key that users can enter to vote in the tournament. All polls have an edit key available to the creator after generation. Tier Breaker consists of a Flask API using MongoEngine, connected to a React client. Socket.io is used to provide live voting updates to all connected clients.',
     userstories: '',
-    tags: ['React', 'Node.js', 'Flask', 'MongoDB', 'Socket.io', 'Javascript', 'Python', 'HTML5', 'CSS3'],
+    tags: ['React', 'Node.js', 'Flask', 'Mocha', 'MongoDB', 'Socket.io', 'Javascript', 'Python', 'HTML5', 'CSS3'],
     altImgs: [tbcreate, tblanding, tbpublic, tbbracket],
     link: 'https://tier-breaker.herokuapp.com/',
     github: 'https://github.com/sschneeberg/tierbreaker_backend'
