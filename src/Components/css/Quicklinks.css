@@ -29,7 +29,7 @@ Link:hover {
 }
 
 @media (max-width: 499px) {
-    div.QuickLinks {
-        left: 0;
+    div.QuickLinks a {
+        background-color: aliceblue;
     }
 }

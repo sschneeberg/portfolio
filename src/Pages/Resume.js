@@ -13,6 +13,8 @@ function Resume() {
                 date={project.date}
                 bullets={project.bullets}
                 description={project.description}
+                links={project.links}
+                credentials={project.credentials}
             />
         );
     });

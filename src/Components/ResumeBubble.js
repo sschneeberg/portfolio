@@ -3,6 +3,7 @@ import './css/BubbleSection.css';
 
 class BubbleSection extends Component {
     render() {
+        console.log(this.props);
         const content2 = this.props.bullets.map((list, i) => {
             return (
                 <li key={i}>
@@ -23,6 +24,22 @@ class BubbleSection extends Component {
                 </h4>
                 <hr />
                 <ul>{content}</ul>
+                {this.props.links ? (
+                    <div className="proj-links">
+                        <a href={this.props.links[1]} target="_blank" rel="noreferrer">
+                            View this project on Github
+                        </a>
+                        <a href={this.props.links[0]} target="_blank" rel="noreferrer">
+                            {'Visit the live site '}
+                            {this.props.credentials ? (
+                                <>
+                                    {'('}credentials: {this.props.credentials[0]}, password: {this.props.credentials[1]}
+                                    {')'}
+                                </>
+                            ) : null}
+                        </a>
+                    </div>
+                ) : null}
             </>
         ) : (
             <>

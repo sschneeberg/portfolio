@@ -111,10 +111,10 @@ class Project extends Component {
                                         View this project on Github
                                     </a>
                                     <a href={this.state.selected.link} target="_blank" rel="noreferrer">
-                                        {'Visit the live site, '}
+                                        {'Visit the live site'}
                                         {this.state.selected.credentials ? (
                                             <>
-                                                use test credentials: {this.state.selected.credentials[0]} {'('}
+                                                , use test credentials: {this.state.selected.credentials[0]} {'('}
                                                 password: {this.state.selected.credentials[1]}
                                                 {')'}
                                             </>

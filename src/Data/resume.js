@@ -7,7 +7,9 @@ const Projects = [
             'Designed database models and created a fully tested Flask API with Socket.io integration as Backend Engineer',
             'Supported frontend team through thoughtful api design, Created React components and CSS stylesheets as needed',
             'Taught myself Flask, MongoEngine, and Python Socketio to create a full stack application in less than one week'
-        ]
+        ],
+        links: ['https://tier-breaker.herokuapp.com/', 'https://github.com/sschneeberg/tierbreaker_backend'],
+        credentials: ''
     },
     {
         title: 'Pest Damage Report ',
@@ -17,7 +19,9 @@ const Projects = [
             'Lead team of four to create full stack application in ten days, Maintained group repository and development schedule',
             'Spearheaded back end api and database development in Express with MongoDB, Implemented Socket.io functionality',
             'Instated user authentication with tiered permissions to allow multifunctional use of the app with varied api access'
-        ]
+        ],
+        links: ['https://pestdamagereport.herokuapp.com/', 'https://github.com/sschneeberg/pdr-frontend'],
+        credentials: ['customer@email.com', 'password']
     },
     {
         title: 'Tracker App ',
@@ -27,7 +31,9 @@ const Projects = [
             'Designed personalized, neutral period tracker with focus on baseline functionality and user designated priorities',
             'Managed an eight model SQL database, implementing both the Sequelize ORM and raw SQL queries',
             'Organized project into controllers, views, and specialized middleware to maintain DRY and MVC strategies'
-        ]
+        ],
+        links: ['https://periodtrackerapp.herokuapp.com', 'https://github.com/sschneeberg/tracker-app'],
+        credentials: ['user', 'password']
     },
     {
         title: 'Fruitris ',
@@ -37,7 +43,9 @@ const Projects = [
             'In one week, designed an enhanced Tetris-like game using HTML Canvas and Javascript DOM manipulation',
             'Implemented MVC strategies to efficiently execute and track gameplay',
             'Leveraged Javascript’s asynchronous functionality to simulate physics and control game logic'
-        ]
+        ],
+        links: ['https://sschneeberg.github.io/fruitris', 'https://github.com/sschneeberg/fruitris'],
+        credentials: ''
     }
 ];
 
